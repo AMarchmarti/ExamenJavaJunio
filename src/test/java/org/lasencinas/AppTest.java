@@ -14,7 +14,7 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    public void test_instance(){
+    public void test_instance_Eyehole(){
        Cereales eyeholes = new Eyeholes();
 
        Eyeholes eye = new Eyeholes("Eyeholes", 25.0f);
@@ -25,4 +25,24 @@ public class AppTest
 
        assertTrue(eyeholes instanceof Item);
     }
+
+    @Test
+    public void test_instance_Bebidas(){
+
+        Bebidas bebida = new FleebJuice();
+
+        Bebidas bebidas = new TurbulentJuice("Turbulent juuuuuice", 30.0f);
+
+        assertTrue(bebida instanceof Item);
+
+        assertTrue(bebidas instanceof Bebidas);
+
+        assertTrue(bebidas.nombre().equals("Turbulent juuuuuice"));
+
+        assertTrue(bebidas.pvp() == 30.0f);
+
+        assertTrue(bebida.empaquetado().envoltorio().equals("Tubo"));
+    }
+
+
 }
