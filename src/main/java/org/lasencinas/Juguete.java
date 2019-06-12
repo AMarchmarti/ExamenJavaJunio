@@ -2,28 +2,29 @@ package org.lasencinas;
 
 import javax.crypto.spec.DESedeKeySpec;
 
-public class Juguete extends Eyeholes {
+public class Juguete implements Item{
 
-    public Juguete() {
-        super();
-    }
+    private String nombre;
+
+    private Float pvp;
 
     public Juguete(String nombre, Float pvp) {
-        super(nombre, pvp);
+        this.nombre = nombre;
+        this.pvp = pvp;
     }
 
     @Override
     public String nombre() {
-        return super.nombre();
+        return nombre;
     }
 
     @Override
     public Float pvp() {
-        return super.pvp();
+        return pvp;
     }
 
     @Override
     public Packing empaquetado() {
-        return super.empaquetado();
+        return new Caja("Caja");
     }
 }

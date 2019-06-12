@@ -31,6 +31,8 @@ public class FastBreakTruck{
 
 
     public static void incluirJuguete(Desayuno desayuno) {
-        desayuno.setItems(new Juguete("Plumbus", 100.0f));
+        if ((desayuno.getItems().contains((Eyeholes) cereales))) {
+            desayuno.setItems(new Juguete("Plumbus", 100.0f));
+        }
     }
 }
