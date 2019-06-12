@@ -3,7 +3,7 @@ package org.lasencinas;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Desayuno {
+public class Desayuno{
 
     private Set<Item> items = new HashSet<>();
 
@@ -29,4 +29,5 @@ public class Desayuno {
         }
         return total;
     }
+
 }
