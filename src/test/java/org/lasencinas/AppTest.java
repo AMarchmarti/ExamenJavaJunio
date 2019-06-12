@@ -60,7 +60,6 @@ public class AppTest
 
     @Test
     public void test_Smiggles(){
-        Cereales cereales = new Smiggles();
 
         Smiggles smiggles = new Smiggles("Smiggles", 30.0f);
 
@@ -70,6 +69,24 @@ public class AppTest
 
         assertTrue(smiggles instanceof Item);
         assertTrue(smiggles instanceof Cereales);
+    }
+
+    @Test
+    public void test_desayuno(){
+        Cereales eyeholes = new Eyeholes("Eyeholes", 25.0f);
+        Cereales smiggles = new Smiggles("Smiggles", 30.0f);
+        Bebidas fleebjuice = new FleebJuice("Fleeb juice", 40.0f);
+        Bebidas turbulent = new TurbulentJuice("Turbulent juice", 50.0f);
+
+        Desayuno desayuno = new Desayuno();
+
+        desayuno.setItems(eyeholes);
+        desayuno.setItems(smiggles);
+        desayuno.setItems(fleebjuice);
+        desayuno.setItems(turbulent);
+
+        assertEquals(145.0f, desayuno.getCoste(),0);
+
     }
 
 
