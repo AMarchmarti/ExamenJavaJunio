@@ -58,5 +58,19 @@ public class AppTest
         assertEquals("Caja", cereales.empaquetado().envoltorio());
     }
 
+    @Test
+    public void test_Smiggles(){
+        Cereales cereales = new Smiggles();
+
+        Smiggles smiggles = new Smiggles("Smiggles", 30.0f);
+
+        assertEquals(smiggles.nombre(), "Smiggles");
+
+        assertEquals(smiggles.pvp(), 30.0f, 0);
+
+        assertTrue(smiggles instanceof Item);
+        assertTrue(smiggles instanceof Cereales);
+    }
+
 
 }
