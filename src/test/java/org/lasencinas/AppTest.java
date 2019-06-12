@@ -15,14 +15,14 @@ public class AppTest
      */
     @Test
     public void test_instance(){
-       Eyeholes eyeholes = new Eyeholes();
+       Cereales eyeholes = new Eyeholes();
+
+       Eyeholes eye = new Eyeholes("Eyeholes", 25.0f);
+
+       assertEquals(eye.nombre(), "Eyeholes");
 
        assertTrue(eyeholes instanceof Cereales);
 
        assertTrue(eyeholes instanceof Item);
-
-       Cereales cereales = new Eyeholes();
-
-       assertEquals(cereales, eyeholes);
     }
 }
