@@ -30,7 +30,7 @@ public abstract class Cereales implements Item {
 
     @Override
     public Packing empaquetado() {
-        return new Caja();
+        return new Caja("Caja");
     }
 
 }
