@@ -44,5 +44,19 @@ public class AppTest
         assertTrue(bebida.empaquetado().envoltorio().equals("Tubo"));
     }
 
+    @Test
+    public void test_empaquetar(){
+        Cereales cereales = new Eyeholes();
+        Packing packing = new Tubo("Tuberia");
+
+        Caja caja = new Caja("Caja");
+
+        assertEquals("Tuberia", packing.envoltorio());
+
+        assertTrue(caja instanceof Packing);
+
+        assertEquals("Caja", cereales.empaquetado().envoltorio());
+    }
+
 
 }
